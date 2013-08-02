@@ -162,15 +162,15 @@ public class FadingActionBarHelper {
     }
 
     protected ActionBar getActionBar(Activity activity) {
-        if (activity instanceof Activity) {
-            return ((Activity) activity).getActionBar();
-        }
-        if (activity instanceof FragmentActivity) {
-            return ((FragmentActivity) activity).getActionBar();
-        }
-        if (activity instanceof ListActivity) {
-            return ((ListActivity) activity).getActionBar();
-        }
+        //if (activity instanceof Activity) {
+           // return ((Activity) activity).getActionBar();
+        //}
+        //if (activity instanceof FragmentActivity) {
+            //return ((FragmentActivity) activity).getActionBar();
+        //}
+        //if (activity instanceof ListActivity) {
+            //return ((ListActivity) activity).getActionBar();
+        //}
         try {
             Method method = activity.getClass().getMethod("getActionBar");
             return (ActionBar) method.invoke(activity);
